@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Getting started &#8212; GitHub first steps  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="GitHub first steps" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="getting-started">
+<h1>Getting started<a class="headerlink" href="#getting-started" title="Link to this heading">¶</a></h1>
+<p>Follow this tutorial to learn basic Git pull request workflow.</p>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h2>
+<p>In this tutorial, you will learn:</p>
+<ol class="arabic simple">
+<li><p>How to create a repository.</p></li>
+<li><p>How to create a new branch.</p></li>
+<li><p>How to publish edited file to GitHub.</p></li>
+<li><p>Open a pull request.</p></li>
+<li><p>Merge a pull request.</p></li>
+</ol>
+<p>What you will need:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://git-scm.com/">Git</a> versioning system.</p></li>
+<li><p>A GitHub account.</p></li>
+<li><p><a class="reference external" href="https://cli.github.com/">GitHub CLI</a>.</p></li>
+<li><p>Any editor that lets you edit text files. An <abbr title="Integrated Development Environment">IDE</abbr> such as Visual Studio Code is recommended.</p></li>
+</ul>
+</section>
+<section id="create-a-repository">
+<h2>Create a repository<a class="headerlink" href="#create-a-repository" title="Link to this heading">¶</a></h2>
+<p>First, you need to create a repository.</p>
+<ol class="arabic">
+<li><p>Open the command line tool.</p></li>
+<li><p>Enter <code class="docutils literal notranslate"><span class="pre">gh</span> <span class="pre">repo</span> <span class="pre">create</span></code>.</p></li>
+<li><p>Select <strong>Create a new repository on github.com from scratch</strong>.</p>
+<img alt="_images/gh_repo_create.png" src="_images/gh_repo_create.png" />
+</li>
+<li><p>Enter repository name.</p>
+<img alt="_images/repository_name.png" src="_images/repository_name.png" />
+</li>
+<li><p>Add a description.</p>
+<img alt="_images/description.png" src="_images/description.png" />
+</li>
+<li><p>Choose <code class="docutils literal notranslate"><span class="pre">Public</span></code> visibility. This will make the repository visible to others.</p>
+<img alt="_images/visibility.png" src="_images/visibility.png" />
+</li>
+<li><p>Enter <code class="docutils literal notranslate"><span class="pre">Y</span></code> to add a <strong>README.md</strong> file.</p>
+<img alt="_images/readme.png" src="_images/readme.png" />
+</li>
+<li><p>On next two steps, simply press <strong>Enter</strong> to apply default settings.</p>
+<img alt="_images/gitgnore_license.png" src="_images/gitgnore_license.png" />
+</li>
+<li><p>Enter <code class="docutils literal notranslate"><span class="pre">Y</span></code> to confirm creating the repository. You will see a confirmation message.</p>
+<img alt="_images/confirm.png" src="_images/confirm.png" />
+</li>
+<li><p>Enter <code class="docutils literal notranslate"><span class="pre">Y</span></code> to clone the new repository. This will create a copy of the repository on your computer.</p>
+<img alt="_images/clone_locally.png" src="_images/clone_locally.png" />
+</li>
+</ol>
+<p>After perfoming the steps, you should see the following file structure:</p>
+<img alt="_images/cloned_repo.png" src="_images/cloned_repo.png" />
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">GitHub first steps</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tutorial: Getting started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-a-repository">Create a repository</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">GitHub first steps</a></li>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2026, Maciej Melchior.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 9.1.0</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/getting_started.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
