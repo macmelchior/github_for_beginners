@@ -26,30 +26,31 @@ Create a repository
 ============================
 First, you need to create a repository. 
 
-1. Open the command line tool.
-2. Enter ``gh repo create``.
-3. Select **Create a new repository on github.com from scratch**.
+1. Create a new project in Visual Studio Code.
+2. Press **Ctrl+`**. This will open the terminal at the bottom.
+3. In the terminal, enter ``gh repo create``.
+4. Select **Create a new repository on github.com from scratch**.
    
    .. image:: _static/gh_repo_create.png
-4. Enter repository name.
+5. Enter repository name.
    
    .. image:: _static/repository_name.png
-5. Add a description.
+6. Add a description.
 
    .. image:: _static/description.png
-6. Choose ``Public`` visibility. This will make the repository visible to others.
+7. Choose ``Public`` visibility. This will make the repository visible to others.
    
    .. image:: _static/visibility.png
-7. Enter ``Y`` to add a **README.md** file.
+8. Enter ``Y`` to add a **README.md** file.
    
    .. image:: _static/readme.png
-8. On next two steps, simply press **Enter** to apply default settings.
+9. On next two steps, simply press **Enter** to apply default settings.
    
    .. image:: _static/gitgnore_license.png
-9.  Enter ``Y`` to confirm creating the repository. You will see a confirmation message.
+10. Enter ``Y`` to confirm creating the repository. You will see a confirmation message.
     
     .. image:: _static/confirm.png
-10. Enter ``Y`` to clone the new repository. This will create a copy of the repository on your computer.
+11. Enter ``Y`` to clone the new repository. This will create a copy of the repository on your computer.
     
     .. image:: _static/clone_locally.png
 
