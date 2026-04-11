@@ -2,7 +2,7 @@
 Getting started
 ###############
 
-Follow this tutorial to learn basic Git workflow.
+Follow this tutorial to learn basic GitHub workflow.
 
 Introduction
 ============
@@ -59,3 +59,23 @@ After perfoming the steps, you should see the following file structure:
 .. image:: _static/cloned_repo.png
 
 
+Create a new branch
+=============================
+
+Once we have a repository, it is time to create a new branch for our changes.
+
+1. Enter ``git branch`` followed by branch name, for example ``git branch docs-update``.
+2. Switch to the branch. Enter ``git checkout docs-update``.
+3. Push the branch to GitHub. Enter ``git push -u origin docs-update``
+
+
+Edit and publish the file
+=============================
+
+Once we have a branch for our edits, it is time to edit the ``README.md`` file. Next, we will publish the edited version in our GitHub repository.
+
+1. Open the ``README.md`` file in Visual Studio Code.
+2. Edit the file. Add a short description of the repository.
+3. Open the command line tool.
+4. Enter ``git add README.md``.
+5. Enter ``git status`` to make sure that your file is added. You should see something like this:

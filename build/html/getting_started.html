@@ -33,7 +33,7 @@
             
   <section id="getting-started">
 <h1>Getting started<a class="headerlink" href="#getting-started" title="Link to this heading">¶</a></h1>
-<p>Follow this tutorial to learn basic Git workflow.</p>
+<p>Follow this tutorial to learn basic GitHub workflow.</p>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h2>
 <p>In this tutorial, you will learn:</p>
@@ -87,6 +87,26 @@
 <p>After perfoming the steps, you should see the following file structure:</p>
 <img alt="_images/cloned_repo.png" src="_images/cloned_repo.png" />
 </section>
+<section id="create-a-new-branch">
+<h2>Create a new branch<a class="headerlink" href="#create-a-new-branch" title="Link to this heading">¶</a></h2>
+<p>Once we have a repository, it is time to create a new branch for our changes.</p>
+<ol class="arabic simple">
+<li><p>Enter <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span></code> followed by branch name, for example <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span> <span class="pre">docs-update</span></code>.</p></li>
+<li><p>Switch to the branch. Enter <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">docs-update</span></code>.</p></li>
+<li><p>Push the branch to GitHub. Enter <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">-u</span> <span class="pre">origin</span> <span class="pre">docs-update</span></code></p></li>
+</ol>
+</section>
+<section id="edit-and-publish-the-file">
+<h2>Edit and publish the file<a class="headerlink" href="#edit-and-publish-the-file" title="Link to this heading">¶</a></h2>
+<p>Once we have a branch for our edits, it is time to edit the <code class="docutils literal notranslate"><span class="pre">README.md</span></code> file. Next, we will publish the edited version in our GitHub repository.</p>
+<ol class="arabic simple">
+<li><p>Open the <code class="docutils literal notranslate"><span class="pre">README.md</span></code> file in Visual Studio Code.</p></li>
+<li><p>Edit the file. Add a short description of the repository.</p></li>
+<li><p>Open the command line tool.</p></li>
+<li><p>Enter <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">README.md</span></code>.</p></li>
+<li><p>Enter <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> to make sure that your file is added. You should see something like this:</p></li>
+</ol>
+</section>
 </section>
 
 
@@ -111,6 +131,8 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Tutorial: Getting started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#create-a-repository">Create a repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-a-new-branch">Create a new branch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#edit-and-publish-the-file">Edit and publish the file</a></li>
 </ul>
 </li>
 </ul>
