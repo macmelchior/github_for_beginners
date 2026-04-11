@@ -11,7 +11,7 @@ In this tutorial, you will learn:
 
 1. How to create a repository.
 2. How to create a new branch.
-3. How to publish edited file to GitHub.
+3. How to publish an edited file to GitHub.
 4. Open a pull request.
 5. Merge a pull request.
 
@@ -44,7 +44,7 @@ First, you need to create a repository.
 8. Enter ``Y`` to add a **README.md** file.
    
    .. image:: _static/readme.png
-9. On next two steps, simply press **Enter** to apply default settings.
+9. On the next two steps, simply press **Enter** to apply default settings.
    
    .. image:: _static/gitgnore_license.png
 10. Enter ``Y`` to confirm creating the repository. You will see a confirmation message.
@@ -54,7 +54,7 @@ First, you need to create a repository.
     
     .. image:: _static/clone_locally.png
 
-After perfoming the steps, you should see the following file structure:
+After performing the steps, you should see the following file structure:
 
 .. image:: _static/cloned_repo.png
 
@@ -62,20 +62,26 @@ After perfoming the steps, you should see the following file structure:
 Create a new branch
 =============================
 
-Once we have a repository, it is time to create a new branch for our changes.
+Once you have a repository, it is time to create a new branch for your changes.
 
 1. Enter ``git branch`` followed by branch name, for example ``git branch docs-update``.
 2. Switch to the branch. Enter ``git checkout docs-update``.
-3. Push the branch to GitHub. Enter ``git push -u origin docs-update``
+3. Push the branch to GitHub. Enter ``git push origin docs-update``.
 
 
 Edit and publish the file
 =============================
 
-Once we have a branch for our edits, it is time to edit the ``README.md`` file. Next, we will publish the edited version in our GitHub repository.
+Once you have a branch, it is time to edit the ``README.md`` file. Next, you will publish the edited version in your GitHub repository.
 
 1. Open the ``README.md`` file in Visual Studio Code.
 2. Edit the file. Add a short description of the repository.
-3. Open the command line tool.
+3. Open the terminal.
 4. Enter ``git add README.md``.
 5. Enter ``git status`` to make sure that your file is added. You should see something like this:
+   
+   .. image:: _static/status.png
+6. Now you have to commit your edited file. Enter ``git commit``.
+7. ``COMMIT_EDITMSG`` file will open. Enter the commit message. It can be a short description of the changes.
+8. Click **Commit**.
+9. Now it is time to push the file. Enter ``git push origin docs-update``.
