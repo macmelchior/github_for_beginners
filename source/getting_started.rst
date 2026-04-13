@@ -2,7 +2,7 @@
 Getting started
 ###############
 
-Follow this tutorial to learn basic GitHub workflow.
+Follow this tutorial to learn basic how to publish your project on GitHub.
 
 Introduction
 ============
@@ -15,6 +15,8 @@ In this tutorial, you will learn:
 4. Open a pull request.
 5. Merge a pull request.
 
+We will perform all these steps in a terminal.
+
 What you will need:
 
 * `Git <https://git-scm.com/>`_ versioning system.
@@ -24,39 +26,24 @@ What you will need:
 
 Create a repository
 ============================
-First, you need to create a repository. 
+First, you need to create a repository.
 
 1. Create a new project in Visual Studio Code.
 2. Press **Ctrl+`**. This will open the terminal at the bottom.
-3. In the terminal, enter ``gh repo create``.
-4. Select **Create a new repository on github.com from scratch**.
-   
-   .. image:: _static/gh_repo_create.png
-5. Enter repository name.
-   
-   .. image:: _static/repository_name.png
+3. In the terminal, enter ``gh repo create``. This will open an interactive repository creator.
+4. Select ``Create a new repository on github.com from scratch``.
+5. Next, enter repository name.
 6. Add a description.
-
-   .. image:: _static/description.png
 7. Choose ``Public`` visibility. This will make the repository visible to others.
-   
-   .. image:: _static/visibility.png
-8. Enter ``Y`` to add a **README.md** file.
-   
-   .. image:: _static/readme.png
+8. Enter ``Y`` to add a ``README.md`` file. This will be our first file on GitHub.
 9. On the next two steps, simply press **Enter** to apply default settings.
-   
-   .. image:: _static/gitgnore_license.png
-10. Enter ``Y`` to confirm creating the repository. You will see a confirmation message.
+10. After that, enter ``Y`` to confirm creating the repository. You will see a confirmation message similar to this:
     
     .. image:: _static/confirm.png
 11. Enter ``Y`` to clone the new repository. This will create a copy of the repository on your computer.
-    
-    .. image:: _static/clone_locally.png
+12. You should see the following file structure:
 
-After performing the steps, you should see the following file structure:
-
-.. image:: _static/cloned_repo.png
+    .. image:: _static/cloned_repo.png
 
 
 Create a new branch
@@ -72,7 +59,8 @@ Once you have a repository, it is time to create a new branch for your changes.
 Edit and publish the file
 =============================
 
-Once you have a branch, it is time to edit the ``README.md`` file. Next, you will publish the edited version in your GitHub repository.
+Once you have a branch, you can start editing the ``README.md`` file. 
+Next, you will publish the edited version in your GitHub repository.
 
 1. Open the ``README.md`` file in Visual Studio Code.
 2. Edit the file. Add a short description of the repository.
@@ -82,6 +70,20 @@ Once you have a branch, it is time to edit the ``README.md`` file. Next, you wil
    
    .. image:: _static/status.png
 6. Now you have to commit your edited file. Enter ``git commit``.
-7. ``COMMIT_EDITMSG`` file will open. Enter the commit message. It can be a short description of the changes.
+7. ``COMMIT_EDITMSG`` file will open. Enter the commit message in the window. 
+   It can be a short description of the changes.
 8. Click **Commit**.
-9. Now it is time to push the file. Enter ``git push origin docs-update``.
+9.  Now it is time to push the file. Enter ``git push origin docs-update``. 
+    This will make the file visible on GitHub. To view it, make sure to select correct branch.
+
+Create a pull request
+=============================
+
+Once you have a file published in the branch, you should open a **pull request**. 
+This will allow the owner of the repository (in this case -- you) to add your changes to the main repository.
+
+1. Enter ``gh pr create``. This will open an interactive creator.
+2. Enter the title.
+3. Press ``e`` to open a notepad. 
+4. Enter the description of changes and close the notepad.
+5. Select ``Submit``.
