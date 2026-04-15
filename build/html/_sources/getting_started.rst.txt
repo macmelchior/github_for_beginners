@@ -74,7 +74,14 @@ Next, you will publish the edited version in your GitHub repository.
 4. Enter ``git add README.md``.
 5. Enter ``git status`` to make sure that your file is added. You should see something like this:
    
-   .. image:: _static/status.png
+   .. code-block:: console
+      
+      On branch docs-update
+      Your branch is up to date with 'origin/docs-update'.
+      
+      Changes to be committed:
+         (use "git restore --staged <file>..." to unstage)
+            new file: README.md
 6. Now you have to commit your edited file. Enter ``git commit``.
 7. ``COMMIT_EDITMSG`` file will open. Enter the commit message in the window. 
    It can be a short description of the changes.
@@ -108,4 +115,14 @@ After a pull request is opened, it needs to be merged with the main branch.
       Switched to branch 'main'
       Your branch is up to date with 'origin/main'.
 2. Merge the head branch. Enter ``git merge docs-update``. 
-3. Push the changes to the main branch. Enter ``git push -u origin main``.
+3. Push the changes to the main branch. Enter ``git push -u origin main``. The following confirmation message will be displayed:
+   
+   .. code-block:: console
+
+      branch 'main' set up to track 'origin/main'.
+      Everything up-to-date
+
+Delete the branch
+=============================
+After successfully updating the branch, you can delete it.
+To do this, enter `git branch -d docs-update`.

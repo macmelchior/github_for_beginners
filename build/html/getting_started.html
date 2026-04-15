@@ -102,7 +102,14 @@ Next, you will publish the edited version in your GitHub repository.</p>
 <li><p>Open the terminal.</p></li>
 <li><p>Enter <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">README.md</span></code>.</p></li>
 <li><p>Enter <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> to make sure that your file is added. You should see something like this:</p>
-<img alt="_images/status.png" src="_images/status.png" />
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">On branch docs-update</span>
+<span class="go">Your branch is up to date with &#39;origin/docs-update&#39;.</span>
+
+<span class="go">Changes to be committed:</span>
+<span class="go">   (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)</span>
+<span class="go">      new file: README.md</span>
+</pre></div>
+</div>
 </li>
 <li><p>Now you have to commit your edited file. Enter <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">COMMIT_EDITMSG</span></code> file will open. Enter the commit message in the window.
@@ -138,8 +145,18 @@ This will allow the owner of the repository (in this case – you) to add your c
 </div>
 </li>
 <li><p>Merge the head branch. Enter <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span> <span class="pre">docs-update</span></code>.</p></li>
-<li><p>Push the changes to the main branch. Enter <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">-u</span> <span class="pre">origin</span> <span class="pre">main</span></code>.</p></li>
+<li><p>Push the changes to the main branch. Enter <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">-u</span> <span class="pre">origin</span> <span class="pre">main</span></code>. The following confirmation message will be displayed:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">branch &#39;main&#39; set up to track &#39;origin/main&#39;.</span>
+<span class="go">Everything up-to-date</span>
+</pre></div>
+</div>
+</li>
 </ol>
+</section>
+<section id="delete-the-branch">
+<h2>Delete the branch<a class="headerlink" href="#delete-the-branch" title="Link to this heading">¶</a></h2>
+<p>After successfully updating the branch, you can delete it.
+To do this, enter <cite>git branch -d docs-update</cite>.</p>
 </section>
 </section>
 
@@ -169,6 +186,7 @@ This will allow the owner of the repository (in this case – you) to add your c
 <li class="toctree-l2"><a class="reference internal" href="#edit-and-publish-the-file">Edit and publish the file</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#open-a-pull-request">Open a pull request</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#merge-a-pull-request">Merge a pull request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#delete-the-branch">Delete the branch</a></li>
 </ul>
 </li>
 </ul>
