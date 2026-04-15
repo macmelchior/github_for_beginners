@@ -33,17 +33,18 @@
             
   <section id="getting-started">
 <h1>Getting started<a class="headerlink" href="#getting-started" title="Link to this heading">¶</a></h1>
-<p>Follow this tutorial to learn basic Git workflow.</p>
+<p>Follow this tutorial to learn basic how to publish your project on GitHub.</p>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h2>
 <p>In this tutorial, you will learn:</p>
 <ol class="arabic simple">
 <li><p>How to create a repository.</p></li>
 <li><p>How to create a new branch.</p></li>
-<li><p>How to publish edited file to GitHub.</p></li>
+<li><p>How to publish an edited file to GitHub.</p></li>
 <li><p>Open a pull request.</p></li>
 <li><p>Merge a pull request.</p></li>
 </ol>
+<p>We will perform all these steps in a terminal.</p>
 <p>What you will need:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://git-scm.com/">Git</a> versioning system.</p></li>
@@ -55,37 +56,90 @@
 <section id="create-a-repository">
 <h2>Create a repository<a class="headerlink" href="#create-a-repository" title="Link to this heading">¶</a></h2>
 <p>First, you need to create a repository.</p>
-<ol class="arabic">
+<ol class="arabic simple">
 <li><p>Create a new project in Visual Studio Code.</p></li>
-<li><p>Press <strong>Ctrl+`</strong>. This will open the terminal at the bottom.</p></li>
-<li><p>In the terminal, enter <code class="docutils literal notranslate"><span class="pre">gh</span> <span class="pre">repo</span> <span class="pre">create</span></code>.</p></li>
-<li><p>Select <strong>Create a new repository on github.com from scratch</strong>.</p>
-<img alt="_images/gh_repo_create.png" src="_images/gh_repo_create.png" />
-</li>
-<li><p>Enter repository name.</p>
-<img alt="_images/repository_name.png" src="_images/repository_name.png" />
-</li>
-<li><p>Add a description.</p>
-<img alt="_images/description.png" src="_images/description.png" />
-</li>
-<li><p>Choose <code class="docutils literal notranslate"><span class="pre">Public</span></code> visibility. This will make the repository visible to others.</p>
-<img alt="_images/visibility.png" src="_images/visibility.png" />
-</li>
-<li><p>Enter <code class="docutils literal notranslate"><span class="pre">Y</span></code> to add a <strong>README.md</strong> file.</p>
-<img alt="_images/readme.png" src="_images/readme.png" />
-</li>
-<li><p>On next two steps, simply press <strong>Enter</strong> to apply default settings.</p>
-<img alt="_images/gitgnore_license.png" src="_images/gitgnore_license.png" />
-</li>
-<li><p>Enter <code class="docutils literal notranslate"><span class="pre">Y</span></code> to confirm creating the repository. You will see a confirmation message.</p>
-<img alt="_images/confirm.png" src="_images/confirm.png" />
-</li>
-<li><p>Enter <code class="docutils literal notranslate"><span class="pre">Y</span></code> to clone the new repository. This will create a copy of the repository on your computer.</p>
-<img alt="_images/clone_locally.png" src="_images/clone_locally.png" />
+<li><p>Press <code class="docutils literal notranslate"><span class="pre">Ctrl+`</span></code>. This will open the terminal at the bottom.</p></li>
+<li><p>In the terminal, enter <code class="docutils literal notranslate"><span class="pre">gh</span> <span class="pre">repo</span> <span class="pre">create</span></code>. This will open an interactive repository creator.</p></li>
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">a</span> <span class="pre">new</span> <span class="pre">repository</span> <span class="pre">on</span> <span class="pre">github.com</span> <span class="pre">from</span> <span class="pre">scratch</span></code>.</p></li>
+<li><p>Next, enter repository name.</p></li>
+<li><p>Add a description.</p></li>
+<li><p>Choose <code class="docutils literal notranslate"><span class="pre">Public</span></code> visibility. This will make the repository visible to others.</p></li>
+<li><p>Enter <code class="docutils literal notranslate"><span class="pre">Y</span></code> to add a <code class="docutils literal notranslate"><span class="pre">README.md</span></code> file. This will be our first file on GitHub.</p></li>
+<li><p>On the next two steps, simply press <strong>Enter</strong> to apply default settings.</p></li>
+<li><p>After that, enter <code class="docutils literal notranslate"><span class="pre">Y</span></code> to confirm creating the repository.
+You will see a confirmation message similar to this:</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">? This will create &quot;docs-update&quot; as a public repository on github.com. Continue? Yes</span>
+<span class="go">✓ Created repository macmelchior/docs-update on github.com</span>
+<span class="go">https://github.com/macmelchior/docs-update</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic" start="11">
+<li><p>Enter <code class="docutils literal notranslate"><span class="pre">Y</span></code> to clone the new repository. This will create a copy of the repository on your computer.</p></li>
+<li><p>You should see the following file structure:</p>
+<img alt="_images/cloned_repo.png" src="_images/cloned_repo.png" />
 </li>
 </ol>
-<p>After perfoming the steps, you should see the following file structure:</p>
-<img alt="_images/cloned_repo.png" src="_images/cloned_repo.png" />
+</section>
+<section id="create-a-new-branch">
+<h2>Create a new branch<a class="headerlink" href="#create-a-new-branch" title="Link to this heading">¶</a></h2>
+<p>Once you have a repository, it is time to create a new branch for your changes.</p>
+<ol class="arabic simple">
+<li><p>Enter <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span></code> followed by branch name, for example <strong>docs-update</strong>.</p></li>
+<li><p>Switch to the branch. Enter <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">docs-update</span></code>.</p></li>
+<li><p>Push the branch to GitHub. Enter <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">docs-update</span></code>.</p></li>
+</ol>
+</section>
+<section id="edit-and-publish-the-file">
+<h2>Edit and publish the file<a class="headerlink" href="#edit-and-publish-the-file" title="Link to this heading">¶</a></h2>
+<p>Once you have a branch, you can start editing the <code class="docutils literal notranslate"><span class="pre">README.md</span></code> file.
+Next, you will publish the edited version in your GitHub repository.</p>
+<ol class="arabic">
+<li><p>Open the <code class="docutils literal notranslate"><span class="pre">README.md</span></code> file in Visual Studio Code.</p></li>
+<li><p>Edit the file. Add a short description of the repository.</p></li>
+<li><p>Open the terminal.</p></li>
+<li><p>Enter <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">README.md</span></code>.</p></li>
+<li><p>Enter <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> to make sure that your file is added. You should see something like this:</p>
+<img alt="_images/status.png" src="_images/status.png" />
+</li>
+<li><p>Now you have to commit your edited file. Enter <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">COMMIT_EDITMSG</span></code> file will open. Enter the commit message in the window.
+It can be a short description of the changes.</p></li>
+<li><p>Click <strong>Commit</strong>.</p></li>
+<li><p>Now it is time to push the file. Enter <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">docs-update</span></code>.
+This will make the file visible on GitHub. To view it, make sure to select correct branch.</p></li>
+</ol>
+</section>
+<section id="open-a-pull-request">
+<h2>Open a pull request<a class="headerlink" href="#open-a-pull-request" title="Link to this heading">¶</a></h2>
+<p>Once you have a file published in the branch, you should open a <strong>pull request</strong>.
+This will allow the owner of the repository (in this case – you) to add your changes to the main repository.</p>
+<ol class="arabic simple">
+<li><p>Enter <code class="docutils literal notranslate"><span class="pre">gh</span> <span class="pre">pr</span> <span class="pre">create</span></code>. This will open an interactive creator.</p></li>
+<li><p>Enter the title.</p></li>
+<li><p>Press <code class="docutils literal notranslate"><span class="pre">e</span></code> to open a notepad.</p></li>
+<li><p>Enter the description of changes and close the notepad.</p></li>
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Submit</span></code>.</p></li>
+<li><p>You should see a link to the pull request, for example:
+<code class="docutils literal notranslate"><span class="pre">https://github.com/macmelchior/github_for_beginners/pull/1</span></code></p></li>
+</ol>
+</section>
+<section id="merge-a-pull-request">
+<h2>Merge a pull request<a class="headerlink" href="#merge-a-pull-request" title="Link to this heading">¶</a></h2>
+<p>After a pull request is opened, it needs to be merged with the main branch.</p>
+<ol class="arabic">
+<li><p>Switch to the main branch. Enter <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">main</span></code>. You will see a confirmation message:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>checkout<span class="w"> </span>main
+<span class="go">Switched to branch &#39;main&#39;</span>
+<span class="go">Your branch is up to date with &#39;origin/main&#39;.</span>
+</pre></div>
+</div>
+</li>
+<li><p>Merge the head branch. Enter <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span> <span class="pre">docs-update</span></code>.</p></li>
+<li><p>Push the changes to the main branch. Enter <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">-u</span> <span class="pre">origin</span> <span class="pre">main</span></code>.</p></li>
+</ol>
 </section>
 </section>
 
@@ -111,6 +165,10 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Tutorial: Getting started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#create-a-repository">Create a repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-a-new-branch">Create a new branch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#edit-and-publish-the-file">Edit and publish the file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#open-a-pull-request">Open a pull request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#merge-a-pull-request">Merge a pull request</a></li>
 </ul>
 </li>
 </ul>
