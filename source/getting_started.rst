@@ -29,7 +29,7 @@ Create a repository
 First, you need to create a repository.
 
 1. Create a new project in Visual Studio Code.
-2. Press **Ctrl+`**. This will open the terminal at the bottom.
+2. Press ``Ctrl+```. This will open the terminal at the bottom.
 3. In the terminal, enter ``gh repo create``. This will open an interactive repository creator.
 4. Select ``Create a new repository on github.com from scratch``.
 5. Next, enter repository name.
@@ -37,9 +37,15 @@ First, you need to create a repository.
 7. Choose ``Public`` visibility. This will make the repository visible to others.
 8. Enter ``Y`` to add a ``README.md`` file. This will be our first file on GitHub.
 9. On the next two steps, simply press **Enter** to apply default settings.
-10. After that, enter ``Y`` to confirm creating the repository. You will see a confirmation message similar to this:
-    
-    .. image:: _static/confirm.png
+10. After that, enter ``Y`` to confirm creating the repository. 
+    You will see a confirmation message similar to this:
+   
+   .. code-block:: console
+   
+      ? This will create "docs-update" as a public repository on github.com. Continue? Yes                                                                                                                                                                                                          
+      ✓ Created repository macmelchior/docs-update on github.com
+      https://github.com/macmelchior/docs-update
+
 11. Enter ``Y`` to clone the new repository. This will create a copy of the repository on your computer.
 12. You should see the following file structure:
 
@@ -51,7 +57,7 @@ Create a new branch
 
 Once you have a repository, it is time to create a new branch for your changes.
 
-1. Enter ``git branch`` followed by branch name, for example ``git branch docs-update``.
+1. Enter ``git branch`` followed by branch name, for example **docs-update**.
 2. Switch to the branch. Enter ``git checkout docs-update``.
 3. Push the branch to GitHub. Enter ``git push origin docs-update``.
 
@@ -76,7 +82,7 @@ Next, you will publish the edited version in your GitHub repository.
 9.  Now it is time to push the file. Enter ``git push origin docs-update``. 
     This will make the file visible on GitHub. To view it, make sure to select correct branch.
 
-Create a pull request
+Open a pull request
 =============================
 
 Once you have a file published in the branch, you should open a **pull request**. 
@@ -87,3 +93,19 @@ This will allow the owner of the repository (in this case -- you) to add your ch
 3. Press ``e`` to open a notepad. 
 4. Enter the description of changes and close the notepad.
 5. Select ``Submit``.
+6. You should see a link to the pull request, for example:
+   ``https://github.com/macmelchior/github_for_beginners/pull/1``
+
+Merge a pull request
+=============================
+After a pull request is opened, it needs to be merged with the main branch. 
+
+1. Switch to the main branch. Enter ``git checkout main``. You will see a confirmation message:
+   
+   .. code-block:: console
+   
+      $ git checkout main
+      Switched to branch 'main'
+      Your branch is up to date with 'origin/main'.
+2. Merge the head branch. Enter ``git merge docs-update``. 
+3. Push the changes to the main branch. Enter ``git push -u origin main``.
