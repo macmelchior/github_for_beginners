@@ -76,9 +76,6 @@ Next, you will publish the edited version in your GitHub repository.
    
    .. code-block:: console
       
-      On branch docs-update
-      Your branch is up to date with 'origin/docs-update'.
-      
       Changes to be committed:
          (use "git restore --staged <file>..." to unstage)
             new file: README.md
@@ -107,22 +104,26 @@ Merge a pull request
 =============================
 After a pull request is opened, it needs to be merged with the main branch. 
 
-1. Switch to the main branch. Enter ``git checkout main``. You will see a confirmation message:
+1. Switch to the main branch. Enter ``git checkout main``.
+2. Merge the head branch. Enter ``git merge docs-update``. You should see a summary of changes made on **docs-update** branch:
    
    .. code-block:: console
-   
-      $ git checkout main
-      Switched to branch 'main'
-      Your branch is up to date with 'origin/main'.
-2. Merge the head branch. Enter ``git merge docs-update``. 
-3. Push the changes to the main branch. Enter ``git push -u origin main``. The following confirmation message will be displayed:
+
+      Updating 7980fa1..6178f35                                                                                                                                                                                                                                                                   
+      Fast-forward
+       source/README.md                  | 119 ++++++++++++++++++++++------
+3. Push the changes to the main branch. Enter ``git push -u origin main``. You will see a confirmation message. It should end like this:
    
    .. code-block:: console
 
       branch 'main' set up to track 'origin/main'.
-      Everything up-to-date
 
 Delete the branch
 =============================
+
 After successfully updating the branch, you can delete it.
-To do this, enter `git branch -d docs-update`.
+
+1. Enter ``git branch -d docs-update``.
+2. You will see a confirmation that branch was deleted.
+
+Congratulations! Now you know how to successfully publish your work on GitHub using nothing but console commands.
