@@ -12,5 +12,6 @@ GitHub first steps
    :maxdepth: 2
    :caption: Contents:
       
-   Tutorial: Getting started <getting_started>
+   Tutorial: Publish your first file to GitHub <getting_started>
+   How to: How to undo your last commit <undo_commit>
 
