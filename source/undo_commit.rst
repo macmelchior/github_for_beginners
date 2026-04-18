@@ -1,5 +1,3 @@
-.. _undo_commit:
-
 #####################
 Undo your last commit
 #####################
@@ -25,7 +23,7 @@ Revert a commit that has not been pushed
 3. Use one of the following commands:
     ``git reset --soft HEAD~1`` if you want to keep changes from the commit staged. 
     This will just undo the commit while keeping your changes ready to re-commit. 
-    ``--soft`` lands you in the state you were in after git add but before ``git commit``.
+    ``--soft`` lands you in the state you were in after ``git add`` but before ``git commit``.
     
     ``git reset --mixed HEAD~1`` if you want to keep changes from the commit unstaged. 
     This will undo the commit and unstage the files. You will need to ``git add`` before commiting again.

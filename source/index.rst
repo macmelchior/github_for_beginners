@@ -4,14 +4,13 @@
    contain the root `toctree` directive.
 
 GitHub first steps
-======================
+==================
 
 
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-      
-   Tutorial: Publish your first file to GitHub <getting_started>
-   How to: How to undo your last commit <undo_commit>
 
+   Tutorial: Publish your first file to GitHub <getting_started>
+   How to: Undo your last commit <undo_commit>
