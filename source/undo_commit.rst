@@ -18,9 +18,8 @@ The method depends on whether you already pushed your commit.
 Revert a commit that has not been pushed
 ========================================
 
-1. Open your local repository in an :abbr:`IDE (Integrated Development Environment)`.
-2. Press ``Ctrl+```. This will open the terminal at the bottom.
-3. Use one of the following commands:
+1. Open the terminal and navigate to your local repository using ``cd`` command.
+2. Use one of the following commands:
     ``git reset --soft HEAD~1`` if you want to keep changes from the commit staged. 
     This will just undo the commit while keeping your changes ready to re-commit. 
     ``--soft`` lands you in the state you were in after ``git add`` but before ``git commit``.
@@ -34,3 +33,8 @@ Revert a commit that has not been pushed
 
         This permanently deletes your uncommited changes. 
         The edits are removed from your disk and cannot be recovered using Git.
+
+Revert a pushed commit
+======================
+1. Open the terminal and navigate to your local repository using ``cd`` command.
+2. Enter ``git revert HEAD``.
